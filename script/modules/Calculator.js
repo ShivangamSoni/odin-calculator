@@ -23,7 +23,11 @@ class Calculator {
     this.history.textContent = this.equation;
 
     if (total) {
-      this.display.textContent = this.total;
+      if (String(this.total).indexOf(".") !== -1) {
+        this.display.textContent = this.total.toFixed(3);
+      } else {
+        this.display.textContent = this.total;
+      }
     } else {
       this.display.textContent = this.current;
     }
