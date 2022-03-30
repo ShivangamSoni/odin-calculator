@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="#" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script/main.js" type="module"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main id="calculator">
+      <div id="displayArea">
+        <p id="history"></p>
+        <p id="display">0</p>
+      </div>
+
+      <div id="buttonsArea">
+        <button class="btn opt" data-opt="+">+</button>
+        <button class="btn act" data-act="BACKSPACE">&#9003;</button>
+        <button class="btn act" data-act="CLEAR">C</button>
+        <button class="btn act" data-act="ALL_CLEAR">AC</button>
+        <button class="btn opt" data-opt="-">-</button>
+        <button class="btn num">7</button>
+        <button class="btn num">8</button>
+        <button class="btn num">9</button>
+        <button class="btn opt" data-opt="*">&times;</button>
+        <button class="btn num">4</button>
+        <button class="btn num">5</button>
+        <button class="btn num">6</button>
+        <button class="btn opt" data-opt="/">/</button>
+        <button class="btn num">1</button>
+        <button class="btn num">2</button>
+        <button class="btn num">3</button>
+        <button class="btn opt" data-opt="=">=</button>
+        <button class="btn act" data-act="DECIMAL">.</button>
+        <button class="btn num">0</button>
+        <button class="btn act" data-act="TOGGLE_SIGN">&#177;</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <a href="https://github.com/ShivangamSoni/" target="_blank">Shivangam Soni</a>
+      </p>
+    </footer>
+
+    <noscript>
+      <h1>JavaScript is Required for this Website</h1>
+    </noscript>
+  </body>
+</html>

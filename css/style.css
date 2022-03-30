@@ -1,0 +1,170 @@
+/* Fonts
+    History - 'Fredericka the Great'
+    Buttons & Display - 'Black Ops One'
+*/
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Fredericka+the+Great&display=swap");
+
+/* Global Settings */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #222831;
+}
+
+/* Common Button Reset & Style */
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Calculator Styling */
+#calculator {
+  flex: 0 0 auto;
+  width: 350px;
+  max-width: 94%;
+  height: 550px;
+  max-height: 94%;
+  display: grid;
+  grid-template-rows: 25% 75%;
+  grid-auto-columns: 100%;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+/* Display Area --Start-- */
+#displayArea {
+  background-color: #30475e;
+  border-radius: 10px 10px 0 0;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  grid-auto-columns: 100%;
+  text-align: right;
+  padding: 2px;
+  max-width: 100%;
+}
+
+#history,
+#display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+#history {
+  font-size: 18px;
+  font-family: "Fredericka the Great", cursive;
+  background-color: #222831;
+  color: #ddd;
+  border-radius: 10px 10px 0 0;
+}
+
+#display {
+  font-size: 26px;
+  font-family: "Black Ops One", cursive;
+  background-color: #ddd;
+  color: #222831;
+}
+/* Display Area --End-- */
+
+/* Button Area --Start-- */
+#buttonsArea {
+  background-color: #30475e;
+  border-radius: 0 0 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
+  padding: 2px;
+}
+
+.btn {
+  font-family: "Black Ops One", cursive;
+  color: #222831;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.btn:nth-last-child(1) {
+  border-radius: 0 0 10px 0;
+}
+
+.btn:nth-last-child(4) {
+  border-radius: 0 0 0 10px;
+}
+
+.num {
+  background-color: hsla(0, 0%, 87%, 0.4);
+}
+
+.num:hover {
+  background-color: hsla(0, 0%, 87%, 0.8);
+}
+
+.opt {
+  background-color: hsl(216, 18%, 16%, 0.4);
+  color: #dddddd;
+}
+
+.opt:hover {
+  background-color: hsl(216, 18%, 16%, 0.8);
+}
+
+.act {
+  background-color: hsl(0, 84%, 64%, 0.4);
+  color: #ddd;
+}
+
+.act:hover {
+  background-color: hsl(0, 84%, 64%, 0.8);
+}
+/* Button Area --End-- */
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+footer a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  position: relative;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: hsl(210, 100%, 50%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms linear;
+}
+footer a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 300ms linear;
+}
